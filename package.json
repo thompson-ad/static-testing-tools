@@ -4,10 +4,10 @@
   "author": "Kent C. Dodds (http://kentcdodds.com/)",
   "license": "GPLv3",
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "babel src --extensions .js,.ts,.tsx --out-dir dist",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "check-types": "tsc",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
     "validate": "npm-run-all --parallel check-types check-format lint build"
